@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 310px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Tab styling */
+.tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+.tab-content {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab-content.active {
+  display: flex;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.input-group-label {
+  flex: 0 0 80px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  text-align: left;
+}
+
+input, select {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+.weight-field, .height-field {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.weight-field input, .height-field input {
+  flex-grow: 1;
+}
+
+.weight-field span, .height-field span {
+  margin-left: 5px;
+  color: #888;
+}
+
+.protein-range-field {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 5px;
+}
+
+.protein-range-field input {
+  width: 50px;
+}
+
+.protein-range-field span {
+  color: #888;
+  margin: 0 5px;
+}
+
+.macro-fields {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 5px;
+}
+
+.macro-fields input {
+  width: 50px;
+}
+
+.macro-fields span {
+  color: #888;
+  margin-right: 10px;
+}
+
+select {
+  -webkit-appearance: menulist;
+  appearance: menulist;
+}
+
+button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #e03d00;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  min-height: 15px;
+  margin-top: 2px;
+  margin-left: 80px;
+}
+
+#protein-result-container, #calories-result-container {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+#protein-result-container h2, #calories-result-container h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#protein-result, #daily-calories, #protein-calories, #carb-calories, #fat-calories {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4285f4;
+  margin-bottom: 10px;
+}
+
+#protein-explanation, #macro-breakdown {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none;
+}
