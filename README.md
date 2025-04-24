@@ -1,2 +1,21 @@
-# calpal-nutrition-calculator
-It's the Daily Protein Calculator - but now there's more! You can now also calculate daily calorie expenditure to maintain current weight, and break that calorie requirement down into protein, fats, and carbs calorie requirements.
+# CalPal Nutrition Calculator
+
+A Chrome extension for calculating daily protein, calories, and macronutrients.
+
+## Milestone 1: Boilerplate
+- Chrome Extension manifest (V3)
+- Popup (800x600)
+- Offline-ready (all assets local)
+
+## Development
+- All code is local and works offline.
+- Use BDD/TDD for future features.
+
+## To Load Extension
+1. Go to chrome://extensions
+2. Enable Developer Mode
+3. Click "Load unpacked" and select this folder
+
+---
+
+See `backlog.json` for the full roadmap.
