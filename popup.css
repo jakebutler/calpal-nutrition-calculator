@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&family=Bungee+Shade&family=Monoton&display=swap');
+
+:root {
+  --cornsilk: #F3EECF;
+  --dark-slate-gray: #1A3C3A;
+  --verdigris: #53B0AE;
+  --melon: #E9A497;
+  --ash-gray: #A0A7A0;
+}
+
+html, body {
+  width: 800px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background: var(--cornsilk);
+}
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Pacifico', 'Arial Rounded MT Bold', Arial, sans-serif;
+  color: var(--dark-slate-gray);
+  background: var(--cornsilk);
+}
+.logo {
+  font-family: 'Bungee Shade', 'Monoton', 'Luckiest Guy', 'Pacifico', cursive, sans-serif;
+  font-size: 2.6rem;
+  margin: 24px 0 8px 0;
+  letter-spacing: 2px;
+  color: var(--melon);
+  text-shadow: 2px 2px 0 var(--ash-gray), 4px 4px 0 var(--ash-gray);
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.tab-btn {
+  background: var(--verdigris);
+  border: 2px solid var(--dark-slate-gray);
+  border-radius: 18px 18px 0 0;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: var(--dark-slate-gray);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 0 var(--ash-gray);
+}
+.tab-btn.active, .tab-btn:hover {
+  background: var(--dark-slate-gray);
+  color: var(--cornsilk);
+}
+.tab-content {
+  width: 90%;
+  max-width: 600px;
+  background: var(--cornsilk);
+  border: 2px solid var(--verdigris);
+  border-radius: 0 18px 18px 18px;
+  box-shadow: 2px 4px 0 var(--ash-gray);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
