@@ -1,0 +1,81 @@
+# CalPal Nutrition Calculator
+
+A Chrome extension for calculating daily protein, calories, and macronutrients, designed to be simple, fast, and offline-ready.
+
+## Problem Statement
+
+Many nutrition calculators are web-based, cluttered with ads, or require an internet connection. Users need a straightforward tool to quickly calculate their daily needs without these distractions.
+
+## Solution Approach
+
+I built a lightweight and focused Chrome extension with two main functions: a daily protein calculator and a calorie and macronutrient calculator. The extension is built with vanilla JavaScript, HTML, and CSS, ensuring it's fast and can be used offline. It uses established formulas like the Mifflin-St Jeor equation for BMR and the Hamwi formula for ideal body weight.
+
+## Key Features
+
+- **Daily Protein Calculator**: Calculates daily protein needs based on age, gender, height, weight, and desired protein intake range. It also includes a 1.1x multiplier for seniors over 65.
+- **Calories & Macros Calculator**: Determines total daily energy expenditure (TDEE) based on BMR and activity level. It also breaks down calories into custom macronutrient percentages for protein, carbs, and fats.
+- **Tabbed Interface**: Easily switch between the protein and calorie calculators.
+- **Input Validation**: Ensures all required fields are filled correctly and provides clear error messages.
+- **Offline First**: All assets and calculations are local to the extension, so it works without an internet connection.
+
+## Technical Implementation
+
+### Architecture
+- **Frontend**: Plain HTML, CSS, and JavaScript. No frameworks or libraries were used to keep the extension lightweight.
+- **Formulas**:
+    - **Protein**: Hamwi formula for Ideal Body Weight (IBW), with adjustments for actual body weight.
+    - **Calories**: Mifflin-St Jeor equation for Basal Metabolic Rate (BMR), multiplied by an activity level factor to get TDEE.
+- **Structure**: The extension uses a simple tab-based navigation system to switch between the two calculator functions.
+
+### Code Example
+```javascript
+// Calculate BMR using Mifflin-St Jeor Equation
+let bmr;
+if (gender === 'male') {
+  bmr = (10 * weightKg) + (6.25 * heightCm) - (5 * age) + 5;
+} else {
+  bmr = (10 * weightKg) + (6.25 * heightCm) - (5 * age) - 161;
+}
+
+// Apply activity multiplier
+let activityMultiplier;
+switch (activityLevel) {
+  case 'sedentary':
+    activityMultiplier = 1.2;
+    break;
+  case 'light':
+    activityMultiplier = 1.375;
+    break;
+  case 'moderate':
+    activityMultiplier = 1.55;
+    break;
+  case 'active':
+    activityMultiplier = 1.725;
+    break;
+  case 'veryactive':
+    activityMultiplier = 1.9;
+    break;
+  default:
+    activityMultiplier = 1.2;
+}
+
+// Calculate TDEE (Total Daily Energy Expenditure)
+const tdee = Math.round(bmr * activityMultiplier);
+```
+
+## Results & Impact
+
+- The extension provides a simple, ad-free, and offline-capable tool for users to manage their nutrition.
+- It serves as a solid foundation for future features, such as meal tracking or integration with other health services.
+
+## Lessons Learned
+
+- Building with vanilla JavaScript, HTML, and CSS is a great way to create a fast and lightweight application.
+- Clear UI and focused functionality are key to a good user experience, especially for a utility application.
+- Writing clean, well-structured code is important, even for a small project, to make it easier to maintain and extend in the future.
+
+## Future Roadmap
+
+- Add a food database to track daily intake.
+- Allow users to save their results and track their progress over time.
+- Add more customization options, such as different formulas for calculating BMR and TDEE.
