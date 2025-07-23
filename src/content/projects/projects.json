@@ -1,0 +1,29 @@
+{
+  "calpal-nutrition-calculator": {
+    "id": "calpal-nutrition-calculator",
+    "slug": "calpal-nutrition-calculator",
+    "title": "CalPal Nutrition Calculator",
+    "subtitle": "Chrome extension for daily nutrition",
+    "description": "A Chrome extension for calculating daily protein, calories, and macronutrients. Uses Mifflin-St Jeor and Hamwi formulas for accurate calculations.",
+    "status": "completed",
+    "categories": ["AI Tools", "Healthcare"],
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "startDate": "2024-07-01",
+    "endDate": "2024-07-22",
+    "featured": true,
+    "priority": 1,
+    "image": "/images/projects/calpal-hero.png",
+    "screenshots": [],
+    "links": {
+      "github": "https://github.com/your-username/calpal-nutrition-calculator"
+    },
+    "metrics": {
+      "users": "N/A",
+      "impact": "Provides a simple, offline-ready tool for nutrition calculations.",
+      "timeline": "3 weeks"
+    },
+    "team": ["Solo Project"],
+    "client": "Internal",
+    "tags": ["MVP", "Production", "Open Source"]
+  }
+}
